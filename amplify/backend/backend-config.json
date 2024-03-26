@@ -13,6 +13,20 @@
       ],
       "providerPlugin": "awscloudformation",
       "service": "API Gateway"
+    },
+    "githubapi": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "githubfunction"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
     }
   },
   "function": {
@@ -41,6 +55,22 @@
         {
           "category": "function",
           "resourceName": "cryptofunction2"
+        }
+      ]
+    },
+    "AMPLIFY_function_githubfunction_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "githubfunction"
+        }
+      ]
+    },
+    "AMPLIFY_function_githubfunction_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "githubfunction"
         }
       ]
     }

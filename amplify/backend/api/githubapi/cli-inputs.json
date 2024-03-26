@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/githubuser": {
+      "name": "/githubuser",
+      "lambdaFunction": "githubfunction",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

@@ -25,13 +25,19 @@ app.use(function(req, res, next) {
   next()
 });
 
+// Import axios
+const axios = require('axios')
+
 app.get('/githubuser', function(req, res) {
-  const githubuser = [
-    { created_at: '1/4/1989' }
-  ]
-  res.json({
-    githubuser
-  })
+  // Define base url
+  let apiUrl = `https://api.github.com/users/maxwellwilke`;
+
+  // Call API and return response
+  axios.get(apiUrl)
+    .then(response => {
+      res.json({  githubuser: response.data })
+    })
+    .catch(err => res.json({ error: err }))
 })
 
 
